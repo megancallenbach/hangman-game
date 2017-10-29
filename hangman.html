@@ -1,0 +1,48 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <title>Hangman!</title>
+
+  <style>
+    body {
+      background-image: linear-gradient(180deg, white, #9cd7f4);
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      font-weight: bold;
+    }
+    p#all-guesses {
+      height: 12px
+    }
+    #game-over {
+      height: 200px
+    }
+  </style>
+
+</head>
+<body>
+  <div id="current-game">
+    <h1>Welcome to the hangman game!</h1>
+    <h1 id="word"></h1>
+    <h3>You have <span id="guesses-number">7</span> guesses remaining!</h3>
+    <p id="all-guesses"></p>
+    <p id="wrong-input"></p>
+    <p>Guess a letter: </p>
+    <form onsubmit="checkGuess()">
+      <input id="user-guess" autofocus autocomplete="off" type="text"/>
+      <input type="submit"/>
+    </form>
+  </div>
+  <div id="game-over">
+    <h1 id="game-result"></h1>
+    <h2 id="correct-word"></h2>
+    <button id="play-again" onclick="playAgain()"> Play Again? </button>
+  </div>
+  <img id="hangman" src="1.jpg" width="300px" height="auto"/>
+
+
+  <script type="text/javascript" src="hangman.js"></script>
+</body>
+</html>
